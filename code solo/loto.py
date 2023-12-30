@@ -1,6 +1,6 @@
 import random
 
-coins = 1
+coins = 10
 
 def play():
     global coins
