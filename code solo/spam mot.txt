@@ -1,0 +1,17 @@
+import keyboard
+import time
+
+word = input("veuiller entrer le mot a spam : ")
+combien = int(input("veuiller entrer combien de fois le mot va être écrit : "))
+delay = float(input("veuiller entrer toutes les combiens de secondes le mot va être écrit : "))
+def spam():
+    time.sleep(3)
+
+    for _ in range(combien):
+        keyboard.write(word)
+
+        keyboard.press_and_release("enter")
+
+        time.sleep(delay)
+
+spam()

@@ -1,0 +1,72 @@
+# puis demander la classe ( eco ou premuim )
+# demander combien ca demander de peronnes puis apres demander singulierement l age ( age prsn 1 : , age prsn 2 : )
+
+istanbul = 200
+dubai = 500
+jakarta = 800
+
+# Demander la destination
+destination = input("Ou voulez-vous aller ? (Istanbul(1), Dubai(2), Jakarta(3)) : ")
+destination = int(destination)
+
+prix_total = 0
+
+# Calculer le prix en fonction de la destination
+if destination == 1:
+    prix_total += istanbul
+elif destination == 2:
+    prix_total += dubai
+elif destination == 3:
+    prix_total += jakarta
+else:
+    print("Destination non valide")
+
+print("Le prix total initial est de", prix_total, "euro")
+
+# Demander la classe
+classe = input("Voulez-vous être en classe éco ou première classe ? (1/2) : ")
+classe = int(classe)
+
+# Modifier le prix en fonction de la classe
+if classe == 2:
+    prix_total *= 3
+elif classe != 1:
+    print("Réponse non valide")
+
+print("Le prix total après la classe est de", prix_total, "euro")
+
+# Demander le nombre de personnes
+nombre_personnes = int(input("Combien de personnes vont voyager ? "))
+
+# Calculer le tarif de chaque personne en fonction de l'âge
+infos_personnes = {}
+for i in range(1, nombre_personnes + 1):
+    nom_personne = input(f"Entrez le nom de la personne {i} : ")
+    age_personne = int(input(f"Entrez l'âge de la personne {i} : "))
+
+    # Calculer le tarif en fonction de l'âge
+    if age_personne < 18 or age_personne > 60:
+        tarif_personne = 0.8 * prix_total  # 80 % du prix total
+    else:
+        tarif_personne = prix_total  # Plein tarif
+
+    infos_personnes[nom_personne] = {'age': age_personne, 'tarif': tarif_personne}
+
+# Afficher les informations sur chaque personne et le prix total par personne
+print("Informations sur les personnes et le prix total par personne :")
+for personne, infos in infos_personnes.items():
+    print(f"{personne}, {infos['age']} ans, Tarif : {infos['tarif']} euro")
+
+# Calculer et afficher le prix total pour toutes les personnes
+prix_total_final = sum(infos['tarif'] for infos in infos_personnes.values())
+print("Le prix total final pour toutes les personnes est de", prix_total_final, "euro")
+
+
+
+
+
+
+
+
+
+
