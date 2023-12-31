@@ -2,7 +2,7 @@ import time
 from tkinter import *
 
 window = Tk()
-click = 100000
+click = 0
 add = 1
 price1 = 100
 price2 = 1000
