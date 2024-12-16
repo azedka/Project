@@ -1,0 +1,99 @@
+/* Style général */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+header, footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+}
+
+/* Barre de navigation */
+nav {
+  background-color: #444;
+  padding: 0.5em;
+  text-align: center;
+  position: sticky; /* Rendre la barre collante */
+  top: 0; /* Fixée en haut de la page */
+  z-index: 10; /* S'assurer que la barre reste au-dessus du contenu */
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #bbb;
+  text-decoration: underline;
+}
+
+/* Section principale */
+main {
+  padding: 2em;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+}
+
+header h1 {
+  font-size: 2em; /* Agrandir le titre */
+  margin-top: 1em; /* Espacement supérieur pour placer le titre plus bas */
+}
+
+h1, h2, h3 {
+  color: #644f4f;
+}
+
+p, ul, li {
+  color: #555;
+}
+
+/* Liens */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Style de l'image */
+.image-container {
+  margin: 1.5em 0;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #333;
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive - ajuster l'image pour les petits écrans */
+@media (max-width: 768px) {
+  main {
+    padding: 1em;
+  }
+
+  .image-container {
+    margin: 1em 0;
+  }
+}
