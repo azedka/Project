@@ -1,0 +1,7 @@
+print(" SSS     RRRR")
+print("S   S    R   R")
+print("S        R   R")
+print(" SSS     RRRR")
+print("    S    R R")
+print("S   S    R  R")
+print(" SSS     R   R")
